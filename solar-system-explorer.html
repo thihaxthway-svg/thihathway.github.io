@@ -16,12 +16,12 @@ canvas{display:block}
 
 .ld-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .ld-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.05) 55%,rgba(0,0,0,.55) 100%);z-index:1}
-.ld-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.ld-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;background:radial-gradient(ellipse at center,rgba(0,0,0,.45) 0%,transparent 70%);padding:3rem 5rem;border-radius:1rem}
 #ld h1{font-weight:200;font-size:clamp(1.4rem,3.5vw,2.4rem);letter-spacing:.35em;color:#fff;margin-bottom:1.5rem;text-transform:uppercase;text-shadow:0 2px 30px rgba(0,0,0,.9)}
 .ld-credit{font-weight:300;font-size:.7rem;letter-spacing:.15em;color:rgba(255,255,255,.7);margin-top:1.2rem;text-shadow:0 2px 20px rgba(0,0,0,.9)}
-.bar{width:200px;height:2px;background:rgba(255,255,255,.25);border-radius:1px;overflow:hidden}
-.bar::after{content:'';display:block;width:35%;height:100%;background:rgba(255,255,255,.85);border-radius:1px;animation:ld 1s ease-in-out infinite}
-@keyframes ld{0%{transform:translateX(-110%)}100%{transform:translateX(380%)}}
+.bar{position:relative;width:200px;height:2px;background:rgba(255,255,255,.25);border-radius:1px;overflow:hidden}
+.bar::after{content:'';display:block;width:35%;height:100%;background:rgba(255,255,255,.85);border-radius:1px;-webkit-animation:ld 1s ease-in-out infinite;animation:ld 1s ease-in-out infinite}
+@-webkit-keyframes ld{0%{-webkit-transform:translateX(-110%);transform:translateX(-110%)}100%{-webkit-transform:translateX(380%);transform:translateX(380%)}}@keyframes ld{0%{transform:translateX(-110%)}100%{transform:translateX(380%)}}
 #hud{position:fixed;top:0;left:0;right:0;padding:1rem 1.4rem;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;z-index:10}
 .ht{font-weight:200;font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--dim);user-select:none}
 .ht-left{display:flex;flex-direction:column;gap:.15rem}
